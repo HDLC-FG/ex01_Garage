@@ -11,7 +11,7 @@ namespace ex01_Garage
 
         public static string CustomToString(this IOption option)
         {
-            return string.Format("{0} ({1}€)", option.GetType().Name, option.GetPrix());
+            return string.Format("{0} ({1})", option.GetType().Name, option.GetPrix().ToString("c"));
         }
 
     }

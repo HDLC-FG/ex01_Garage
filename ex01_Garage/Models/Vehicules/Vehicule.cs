@@ -28,7 +28,7 @@ namespace ex01_Garage.Models.Vehicules
 
         public override string ToString()
         {
-            return string.Format("+ Voiture {0} : {1} {2}[{3}] d'une valeur totale de {4} €", nomMarque, GetType().Name, moteur, options.CustomToString(), GetPrix());
+            return string.Format("+ Voiture {0} : {1} {2}[{3}] d'une valeur totale de {4}", nomMarque, GetType().Name, moteur, options.CustomToString(), GetPrix().ToString("c"));
         }
     }
 }

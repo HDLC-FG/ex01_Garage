@@ -9,6 +9,8 @@ namespace ex01_Garage
     {
         static void Main(string[] args)
         {
+            Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+
             Garage garage = new Garage();
             Console.WriteLine(garage);
 

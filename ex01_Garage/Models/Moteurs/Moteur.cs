@@ -21,7 +21,7 @@ namespace ex01_Garage.Models.Moteurs
 
         public override string ToString()
         {
-            return string.Format("Moteur {0} {1} ({2}€)", type, cylindre, prix);
+            return string.Format("Moteur {0} {1} ({2})", type, cylindre, prix.ToString("c"));
         }
     }
 }
