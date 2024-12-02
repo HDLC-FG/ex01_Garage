@@ -13,11 +13,11 @@ namespace ex01_Garage.Models
 
         public override string ToString()
         {
-            if(voitures.Count == 0)
+            if (voitures.Count == 0)
             {
                 return "Aucune voiture sauvegardée !\n**************************\n* Garage .NET *\n**************************";
             }
-            
+
             return string.Format(string.Join("\n", voitures));
         }
     }
