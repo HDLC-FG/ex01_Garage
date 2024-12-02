@@ -7,7 +7,6 @@ namespace ex01_Garage.Models.Vehicules
     internal class Vehicule
     {
         private double prix;
-        private string nom = string.Empty;
         private List<IOption> options = new List<IOption>();
         private Moteur moteur;
         protected Marque nomMarque;
@@ -17,19 +16,9 @@ namespace ex01_Garage.Models.Vehicules
             options.Add(option);
         }
 
-        public Marque GetMarque()
-        {
-            return nomMarque;
-        }
-
-        public List<IOption> GetOptions()
-        {
-            return options;
-        }
-
         public double GetPrix()
         {
-            return prix + options.Select(x => x.GetPrix()).Sum();
+            return prix + options.Select(x => x.GetPrix()).Sum() + moteur.GetPrix();
         }
 
         public void SetMoteur(Moteur moteur)
